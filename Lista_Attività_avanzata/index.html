@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista attività</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>📝 Le mie attività</h1>
+
+      <form id="task-form">
+        <input
+          type="text"
+          id="task-input"
+          placeholder="Inserisci una nuova attività"
+          required
+        />
+        <button type="submit">Aggiungi</button>
+      </form>
+
+      <div class="filters">
+        <button data-filter="all" class="active">Tutte</button>
+        <button data-filter="active">Attive</button>
+        <button data-filter="completed">Completate</button>
+      </div>
+
+      <ul id="task-list"></ul>
+
+      <div id="status-message"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #218838;
+}
+
+.filters {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filters button {
+  background: #ddd;
+  border: none;
+  margin: 0 5px;
+  padding: 7px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filters button.active,
+.filters button:hover {
+  background-color: #28a745;
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fafafa;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  word-break: break-word;
+}
+
+li.completed span.task-text {
+  text-decoration: line-through;
+  color: gray;
+}
+
+li span.task-text {
+  flex: 1;
+  cursor: pointer;
+}
+
+li input.edit-input {
+  flex: 1;
+  padding: 6px 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+li button {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+li button.toggle-btn {
+  background: #28a745;
+  margin-left: 0;
+}
+
+li button.toggle-btn:hover {
+  background: #218838;
+}
+
+li button.delete-btn:hover {
+  background: #c82333;
+}
+
+#status-message {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #28a745;
+  min-height: 1.2em;
+}
+
+@media (max-width: 600px) {
+  form {
+    flex-direction: column;
+  }
+
+  form button {
+    width: 100%;
+  }
+}
